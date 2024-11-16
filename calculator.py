@@ -24,8 +24,18 @@ def sums(x, y):
 
     """
     assert isinstance(x, (int, float)), f'{x} needs to be int or float'
-    assert isinstance(y, (int, float)), f'{y} needs to be int or float'
+    assert isinstance(y, (int, float)), f'{x} needs to be int or float'
     return x + y
+
+
+def sub(x, y):
+    """
+    >>> sub(2, 5)
+    -3
+    """
+    assert isinstance(x, (int, float)), f'{x} needs to be int or float'
+    assert isinstance(y, (int, float)), f'{x} needs to be int or float'
+    return x - y
 
 
 if __name__ == '__main__':
