@@ -12,10 +12,20 @@ class Person:
 
             (receive_data turns True if response of api has connected)
 '''
+try:
+    import sys
+    from pathlib import Path
+
+    src_path = Path(__file__).parent.parent / 'src'
+    sys.path.append(str(src_path))
+
+except Exception:
+    raise
+
 
 import unittest
 from unittest.mock import patch
-from person import Person
+from person import Person  # type: ignore
 
 
 class TestPerson(unittest.TestCase):

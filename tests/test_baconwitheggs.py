@@ -11,9 +11,19 @@ Refactor
 Step 3 ->  Upgrade my code;
 
 '''
+try:
+    import sys
+    from pathlib import Path
+
+    src_path = Path(__file__).parent.parent / 'src'
+    sys.path.append(str(src_path))
+
+except Exception:
+    raise
+
 
 import unittest
-from baconwitheggs import bacon_with_eggs
+from baconwitheggs import bacon_with_eggs  # type: ignore
 
 
 class TestBaconWithEggs(unittest.TestCase):

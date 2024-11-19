@@ -1,5 +1,15 @@
+try:
+    import sys
+    from pathlib import Path
+
+    src_path = Path(__file__).parent.parent / 'src'
+    sys.path.append(str(src_path))
+
+except Exception:
+    raise
+
 import unittest
-from calculator import sums, sub
+from calculator import sums, sub  # type: ignore
 
 
 class TestCalculator(unittest.TestCase):
